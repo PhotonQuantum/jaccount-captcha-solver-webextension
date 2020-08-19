@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "jAccount Captcha Solver",
+    "version": "1.1.1",
+    "description": "Solve jAccount captcha automatically.",
+    "icons": {
+        "48": "icons/48.png",
+        "96": "icons/96.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://jaccount.sjtu.edu.cn/jaccount/jalogin*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "*.onnx"
+    ]
+}
