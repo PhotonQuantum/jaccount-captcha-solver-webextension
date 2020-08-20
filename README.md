@@ -1,6 +1,15 @@
 # jAccount Captcha Solver (WebExtension)
 
-A browser extension which solve jAccount captcha automatically.
+A browser extension which solves jAccount captcha automatically.
+
+<p align="center">
+  <a href="https://chrome.google.com/webstore/detail/ghjnmfipajgiookibellpgccanleebpp">
+    <img src="docs/chrome-webstore.png" alt="Chrome Web Store"></a>
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/jaccount-captcha-solver">
+    <img src="docs/firefox-addons.png" alt="Firefox add-ons"></a>
+</p>
+
+> This plugin is under review by Microsoft for Chromium-based Edge browser.
 
 ## Get Started
 
@@ -25,3 +34,6 @@ If your build works, you will see the captcha filled by this extension automatic
 ## License
 
 This project is licensed under GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details.
+
+<p align="center">&mdash;💖&mdash;</p>
+<p align="center"><i>Built with love by LightQuantum</i></p>
