@@ -7,9 +7,9 @@ A browser extension which solves jAccount captcha automatically.
     <img src="docs/chrome-webstore.png" alt="Chrome Web Store"></a>
   <a href="https://addons.mozilla.org/en-US/firefox/addon/jaccount-captcha-solver">
     <img src="docs/firefox-addons.png" alt="Firefox add-ons"></a>
+  <a href="https://microsoftedge.microsoft.com/addons/detail/ojimijockcalehahhfafehfiilncocel">
+    <img src="docs/edge-extension.png" alt="Microsoft Store"></a>
 </p>
-
-> This plugin is under review by Microsoft for Chromium-based Edge browser.
 
 ## Get Started
 
