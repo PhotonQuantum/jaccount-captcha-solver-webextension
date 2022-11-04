@@ -15,15 +15,15 @@ A browser extension which solves jAccount captcha automatically.
 
 ### Build the extension
 
-You need to have 'yarn' installed.
+You need to have 'pnpm' installed.
 
 ``` shell script
-$ yarn
-$ yarn build
-$ yarn package
+$ pnpm
+$ pnpm build
+$ pnpm package
 ```
 
-Your unsigned extension is ready in 'web-ext-artifacts' directory.
+Your unsigned extension is ready in 'dist' directory.
 
 ### Test your build
 
