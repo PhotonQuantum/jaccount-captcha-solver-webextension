@@ -1,20 +1,22 @@
 {
+  "version": "1.2.0",
   "dependencies": {
-    "ndarray": "^1.0.19",
-    "ndarray-ops": "^1.2.2",
-    "onnxjs": "^0.1.7"
+    "onnxruntime-web": "^1.13.1"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^6.0.3",
+    "@futureportal/parcel-transformer-package-version": "^1.0.0",
+    "@parcel/config-webextension": "^2.7.0",
+    "@parcel/packager-webextension": "^2.7.0",
+    "@parcel/transformer-raw": "^2.7.0",
+    "@parcel/transformer-webextension": "^2.7.0",
+    "copy-webpack-plugin": "^11.0.0",
     "file-loader": "^6.0.0",
-    "web-ext": "^5.0.0",
-    "webextension-polyfill": "^0.6.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.11"
+    "parcel": "^2.7.0",
+    "web-ext": "^7.3.1"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "package": "web-ext build --source-dir ./build",
+    "build": "parcel build src/manifest.json --dist-dir ./build",
+    "package": "web-ext build --source-dir ./build -a ./dist",
     "lint": "web-ext lint --source-dir ./build"
   }
 }

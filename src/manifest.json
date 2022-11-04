@@ -1,24 +1,21 @@
 {
-    "manifest_version": 2,
-    "name": "jAccount Captcha Solver",
-    "version": "1.1.2",
-    "description": "Solve jAccount captcha automatically.",
-    "icons": {
-        "48": "icons/48.png",
-        "96": "icons/96.png",
-        "128": "icons/128.png"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://jaccount.sjtu.edu.cn/jaccount/jalogin*"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        "*.onnx"
-    ]
+  "manifest_version": 2,
+  "name": "jAccount Captcha Solver",
+  "version": "PACKAGE_VERSION",
+  "description": "Solve jAccount captcha automatically.",
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://jaccount.sjtu.edu.cn/jaccount/jalogin*"
+      ],
+      "js": [
+        "content/index.js"
+      ]
+    }
+  ]
 }

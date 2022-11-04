@@ -1,0 +1,12 @@
+{
+  "extends": "@parcel/config-webextension",
+  "transformers": {
+    "*.onnx": [
+      "@parcel/transformer-raw"
+    ],
+    "manifest.json": [
+      "@futureportal/parcel-transformer-package-version",
+      "..."
+    ]
+  }
+}
