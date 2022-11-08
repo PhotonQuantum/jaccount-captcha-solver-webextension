@@ -1,7 +1,8 @@
 {
   "version": "1.2.1",
   "dependencies": {
-    "onnxruntime-web": "^1.13.1"
+    "onnxruntime-web": "^1.13.1",
+    "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
     "@futureportal/parcel-transformer-package-version": "^1.0.0",
@@ -12,11 +13,17 @@
     "copy-webpack-plugin": "^11.0.0",
     "file-loader": "^6.0.0",
     "parcel": "^2.7.0",
+    "parcel-namer-rewrite": "2.0.0-rc.3",
     "web-ext": "^7.3.1"
   },
   "scripts": {
-    "build": "parcel build src/manifest.json --dist-dir ./build",
+    "build": "cp node_modules/onnxruntime-web/dist/*.wasm src/wasm/ && parcel build src/manifest.json --dist-dir ./build",
     "package": "web-ext build --source-dir ./build -a ./dist",
     "lint": "web-ext lint --source-dir ./build"
+  },
+  "parcel-namer-rewrite": {
+    "rules": {
+      "(.*).wasm": "$1.wasm"
+    }
   }
 }

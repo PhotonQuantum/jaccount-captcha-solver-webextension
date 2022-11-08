@@ -8,5 +8,8 @@
       "@futureportal/parcel-transformer-package-version",
       "..."
     ]
-  }
+  },
+  "namers": [
+    "parcel-namer-rewrite"
+  ]
 }

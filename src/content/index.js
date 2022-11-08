@@ -1,5 +1,8 @@
 import model from "url:../model/model.onnx";
-import {InferenceSession, Tensor} from "onnxruntime-web";
+import {env, InferenceSession, Tensor} from "onnxruntime-web";
+import browser from "webextension-polyfill";
+// noinspection ES6UnusedImports
+import {STUB} from "./wasm_stub";
 
 const captchaInput = document.getElementById("captcha");
 const captchaImg = document.getElementById("captcha-img");
@@ -19,10 +22,11 @@ function cvtBinary(data, threshold) {
 async function predict() {
     // load model
     if (typeof this.session === "undefined") {
+        env.wasm.wasmPaths = browser.runtime.getURL("");
         this.session = await InferenceSession.create(
             model,
             {
-                executionProviders: ["webgl"],
+                executionProviders: ["wasm"],
             }
         );
     }
