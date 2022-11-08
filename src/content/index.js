@@ -4,7 +4,7 @@ import {InferenceSession, Tensor} from "onnxruntime-web";
 const captchaInput = document.getElementById("captcha");
 const captchaImg = document.getElementById("captcha-img");
 
-const width = 100;
+const width = 110;
 const height = 40;
 
 function cvtBinary(data, threshold) {
